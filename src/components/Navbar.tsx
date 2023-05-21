@@ -1,6 +1,7 @@
 import { GiHamburgerMenu } from "react-icons/gi";
 import { BsYoutube } from "react-icons/bs";
 import { AiOutlineSearch, AiOutlineClose } from "react-icons/ai";
+import { TiMicrophone } from "react-icons/ti";
 
 import { Link } from "react-router-dom";
 
@@ -39,6 +40,9 @@ export const Navbar = () => {
             </button>
           </div>
         </form>
+        <div className="rounded-full bg-zinc-900 p-3 text-xl">
+          <TiMicrophone />
+        </div>
       </div>
     </div>
   );
