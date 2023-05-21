@@ -1,4 +1,6 @@
 import { GiHamburgerMenu } from "react-icons/gi";
+import { BsYoutube } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 export const Navbar = () => {
   return (
@@ -7,6 +9,12 @@ export const Navbar = () => {
         <div>
           <GiHamburgerMenu />
         </div>
+        <Link to="/">
+          <div className="flex items-center justify-center gap-1">
+            <BsYoutube className="text-3xl text-red-600" />
+            <span className="text-xl font-medium">YouTube</span>
+          </div>
+        </Link>
       </div>
     </div>
   );
