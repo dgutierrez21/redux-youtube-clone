@@ -56,6 +56,8 @@ export const Navbar = () => {
             9+
           </span>
         </div>
+
+        <img src="/user.png" alt="logo" className="h-9 w-9 rounded-full" />
       </div>
     </div>
   );
