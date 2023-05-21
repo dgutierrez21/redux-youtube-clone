@@ -1,7 +1,8 @@
 import { GiHamburgerMenu } from "react-icons/gi";
-import { BsYoutube } from "react-icons/bs";
+import { BsYoutube, BsCameraVideo, BsBell } from "react-icons/bs";
 import { AiOutlineSearch, AiOutlineClose } from "react-icons/ai";
 import { TiMicrophone } from "react-icons/ti";
+import { IoAppsSharp } from "react-icons/io5";
 
 import { Link } from "react-router-dom";
 
@@ -42,6 +43,18 @@ export const Navbar = () => {
         </form>
         <div className="rounded-full bg-zinc-900 p-3 text-xl">
           <TiMicrophone />
+        </div>
+      </div>
+
+      <div className="flex items-center gap-5 text-xl">
+        <BsCameraVideo />
+        <IoAppsSharp />
+
+        <div className="relative">
+          <BsBell />
+          <span className="absolute bottom-2 left-2 rounded-full bg-red-600 px-1 text-xs">
+            9+
+          </span>
         </div>
       </div>
     </div>
