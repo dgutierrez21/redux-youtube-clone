@@ -11,11 +11,11 @@ export const getHomePageVideos = createAsyncThunk(
       youtubeApp: { nextPageToken: nextPageTokenFromState, videos },
     } = getState() as RootState;
 
+    const youtubeUrl = `/search?maxResults=20&q=reactjs%20projects&key=${API_KEY}&part=snippet&type=video`;
+
     const {
       data: { items, nextPageToken },
-    } = await YOUTUBE_API.get(
-      `/search?maxResults=20&q="reactjs projects"&key=${API_KEY}&part=snippet,statistics&type=video`
-    );
+    } = await YOUTUBE_API.get(youtubeUrl);
 
     console.log(items);
   }
