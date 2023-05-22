@@ -1,4 +1,5 @@
 import {
+  helpsLinks,
   mainLinks,
   secondaryLinks,
   subscriptionLinks,
@@ -36,6 +37,17 @@ export const SideBar = () => {
 
       <ul className="flex flex-col border-b-2 border-gray-700">
         {subscriptionLinks.map(({ icon, name }) => (
+          <li className="py-3 pl-6 hover:bg-zinc-600" key={name}>
+            <a href="#" className="flex items-center gap-5">
+              {icon}
+              <span className="text-sm tracking-wider">{name}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+
+      <ul className="flex flex-col border-b-2 border-gray-700">
+        {helpsLinks.map(({ icon, name }) => (
           <li className="py-3 pl-6 hover:bg-zinc-600" key={name}>
             <a href="#" className="flex items-center gap-5">
               {icon}
