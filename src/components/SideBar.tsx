@@ -58,13 +58,13 @@ export const SideBar = () => {
         ))}
       </ul>
 
-      <ul className="flex flex-wrap gap-2 to-zinc-400 p-4 text-sm">
+      <ul className="flex flex-wrap gap-2 p-4 text-sm text-zinc-400">
         {textLinks[0].map((name) => (
           <li key={name}>{name}</li>
         ))}
       </ul>
 
-      <ul className="flex flex-wrap gap-2 to-zinc-400 p-4 text-sm">
+      <ul className="flex flex-wrap gap-2 p-4 text-sm text-zinc-400">
         {textLinks[1].map((name) => (
           <li key={name}>{name}</li>
         ))}
