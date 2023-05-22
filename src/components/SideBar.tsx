@@ -3,6 +3,7 @@ import {
   mainLinks,
   secondaryLinks,
   subscriptionLinks,
+  textLinks,
 } from "../data/iconsData";
 
 export const SideBar = () => {
@@ -54,6 +55,18 @@ export const SideBar = () => {
               <span className="text-sm tracking-wider">{name}</span>
             </a>
           </li>
+        ))}
+      </ul>
+
+      <ul className="flex flex-wrap gap-2 to-zinc-400 p-4 text-sm">
+        {textLinks[0].map((name) => (
+          <li key={name}>{name}</li>
+        ))}
+      </ul>
+
+      <ul className="flex flex-wrap gap-2 to-zinc-400 p-4 text-sm">
+        {textLinks[1].map((name) => (
+          <li key={name}>{name}</li>
         ))}
       </ul>
     </div>
