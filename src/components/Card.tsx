@@ -46,7 +46,7 @@ export const Card = ({
             </div>
 
             <div>
-              <span className="after:mx-1 after:content-['*']">
+              <span className="after:mx-1 after:content-['•']">
                 {videoViews} views
               </span>
               <span>{videoAge}</span>
