@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { Navbar } from "../components/Navbar";
 import { SideBar } from "../components/SideBar";
 import { useAppDispatch } from "../store/hooks";
-import { getHomePageVideos } from "../store/reducers/youtubeSliceReducers";
+import { getHomePageVideos } from "../store/reducers/youtubeSliceReducers/getHomePageVideos";
 
 export const Home = () => {
   const dispatch = useAppDispatch();

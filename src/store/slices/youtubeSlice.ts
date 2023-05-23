@@ -1,7 +1,7 @@
 import { initialState } from "../../Types";
 
 import { createSlice } from "@reduxjs/toolkit";
-import { getHomePageVideos } from "../reducers/youtubeSliceReducers";
+import { getHomePageVideos } from "../reducers/youtubeSliceReducers/getHomePageVideos";
 
 const initialState: initialState = {
   videos: [],
