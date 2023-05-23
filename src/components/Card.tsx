@@ -5,6 +5,7 @@ export const Card = ({
   videoDuration,
   videoThumbnail,
   videoId,
+  channelInfo,
 }: HomePageVideos) => {
   return (
     <div className="flex h-60 w-64 flex-col gap-3">
@@ -16,6 +17,18 @@ export const Card = ({
         <Link to={`/watch/${videoId}`}>
           <img src={videoThumbnail} alt="thumbnail" className="h-44 w-72" />
         </Link>
+      </div>
+
+      <div className="flex gap-2">
+        <div className="min-w-fit">
+          <a href="#">
+            <img
+              src={channelInfo.image}
+              alt="channel"
+              className="h-9 w-9 rounded-full"
+            />
+          </a>
+        </div>
       </div>
     </div>
   );
