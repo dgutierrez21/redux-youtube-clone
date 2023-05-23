@@ -32,24 +32,25 @@ export const Card = ({
             />
           </a>
         </div>
-
-        <h3>
-          <a href="#" className="line-clamp-2">
-            {videoTitle}
-          </a>
-        </h3>
-        <div className="text-sm text-gray-400">
-          <div>
-            <a href="#" className="hover:text-white">
-              {channelInfo.name}
+        <div>
+          <h3>
+            <a href="#" className="line-clamp-2">
+              {videoTitle}
             </a>
-          </div>
+          </h3>
+          <div className="text-sm text-gray-400">
+            <div>
+              <a href="#" className="hover:text-white">
+                {channelInfo.name}
+              </a>
+            </div>
 
-          <div>
-            <span className="after:mx-1 after:content-['*']">
-              {videoViews} views
-            </span>
-            <span>{videoAge}</span>
+            <div>
+              <span className="after:mx-1 after:content-['*']">
+                {videoViews} views
+              </span>
+              <span>{videoAge}</span>
+            </div>
           </div>
         </div>
       </div>
