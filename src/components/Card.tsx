@@ -7,6 +7,8 @@ export const Card = ({
   videoId,
   channelInfo,
   videoTitle,
+  videoViews,
+  videoAge,
 }: HomePageVideos) => {
   return (
     <div className="flex h-60 w-64 flex-col gap-3">
@@ -36,6 +38,20 @@ export const Card = ({
             {videoTitle}
           </a>
         </h3>
+        <div className="text-sm text-gray-400">
+          <div>
+            <a href="#" className="hover:text-white">
+              {channelInfo.name}
+            </a>
+          </div>
+
+          <div>
+            <span className="after:mx-1 after:content-['*']">
+              {videoViews} views
+            </span>
+            <span>{videoAge}</span>
+          </div>
+        </div>
       </div>
     </div>
   );
