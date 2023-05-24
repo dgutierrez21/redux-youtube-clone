@@ -15,7 +15,14 @@ const initialState: initialState = {
 export const YoutubeSlice = createSlice({
   name: "youtubeApp",
   initialState,
-  reducers: {},
+  reducers: {
+    clearVideos: (state) => {
+      state.videos = [];
+      state.nextPageToken = null;
+
+      console.log("clear")
+    },
+  },
   extraReducers: (builder) => {
     builder.addCase(getHomePageVideos.fulfilled, (state, action) => {
       if (action.payload == undefined) return;
@@ -25,3 +32,5 @@ export const YoutubeSlice = createSlice({
     });
   },
 });
+
+export const {clearVideos} = YoutubeSlice.actions;
