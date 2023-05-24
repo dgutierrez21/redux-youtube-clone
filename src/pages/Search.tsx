@@ -18,11 +18,8 @@ export const Search = () => {
   const searchTerm = useAppSelector((state) => state.youtubeApp.searchTerm);
 
   useEffect(() => {
-    if (!searchTerm) {
-      navigate("/");
-      return;
-    }
-  }, [searchTerm, navigate]);
+    if (!searchTerm) navigate("/");
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <div className="max-h-screen overflow-hidden">
