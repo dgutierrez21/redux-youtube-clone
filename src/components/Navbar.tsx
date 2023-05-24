@@ -1,12 +1,32 @@
+import { FormEvent } from "react";
+
 import { GiHamburgerMenu } from "react-icons/gi";
 import { BsYoutube, BsCameraVideo, BsBell } from "react-icons/bs";
 import { AiOutlineSearch, AiOutlineClose } from "react-icons/ai";
 import { TiMicrophone } from "react-icons/ti";
 import { IoAppsSharp } from "react-icons/io5";
 
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useAppDispatch } from "../store/hooks";
+import { clearVideos } from "../store/slices/youtubeSlice";
 
 export const Navbar = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const dispatch = useAppDispatch();
+
+  const handleSearch = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if (location.pathname !== "/search") {
+      navigate("/search");
+      return;
+    }
+
+    dispatch(clearVideos());
+    dispatch(getSearchPageVideos(false));
+  };
+
   return (
     <div className="sticky top-0 z-50 flex h-14 items-center justify-between bg-[#212121] px-14 opacity-95">
       <div className="flex items-center gap-8 text-2xl">
@@ -22,7 +42,7 @@ export const Navbar = () => {
       </div>
 
       <div className="flex items-center justify-center gap-5">
-        <form action="">
+        <form action="" onSubmit={handleSearch}>
           <div className="flex h-10 items-center bg-zinc-900 px-4 pr-0">
             <div className="flex items-center gap-4 pr-5">
               <div>
