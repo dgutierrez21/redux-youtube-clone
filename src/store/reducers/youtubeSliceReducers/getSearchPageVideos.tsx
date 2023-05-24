@@ -12,7 +12,7 @@ export const getSearchPageVideos = createAsyncThunk(
       youtubeApp: { nextPageToken: nextPageTokenFromState, videos, searchTerm },
     } = getState() as RootState;
 
-    const youtubeUrl = `/search?=${searchTerm}&key=${API_KEY}&part=snippet&type=video&${
+    const youtubeUrl = `/search?q=${searchTerm}&key=${API_KEY}&part=snippet&type=video&${
       isNext ? `pageToken=${nextPageTokenFromState}` : ""
     }`;
 
