@@ -61,7 +61,11 @@ export const Navbar = () => {
                 onChange={handleChange}
               />
 
-              <AiOutlineClose className="cursor-pointer text-xl" />
+              <AiOutlineClose
+                className={`cursor-pointer text-xl ${
+                  !searchTerm ? "invisible" : "visible"
+                }`}
+              />
             </div>
             <button className="flex h-10 w-16 items-center justify-center bg-zinc-800">
               <AiOutlineSearch className="text-xl" />
