@@ -6,9 +6,9 @@ import { useAppDispatch, useAppSelector } from "../store/hooks";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { Spinner } from "../components/Spinner";
 import { HomePageVideos } from "../Types";
-import { Card } from "../components/Card";
 import { getSearchPageVideos } from "../store/reducers/youtubeSliceReducers/getSearchPageVideos";
 import { useNavigate } from "react-router-dom";
+import { SearchCard } from "../components/SearchCard";
 
 export const Search = () => {
   const navigate = useNavigate();
@@ -39,7 +39,7 @@ export const Search = () => {
           >
             <div className="grid grid-cols-4 gap-x-8 gap-y-14 p-8">
               {videos.map((item: HomePageVideos) => (
-                <Card key={item.videoId} {...item} />
+                <SearchCard key={item.videoId} {...item} />
               ))}
             </div>
           </InfiniteScroll>
