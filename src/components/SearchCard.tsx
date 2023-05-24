@@ -37,6 +37,17 @@ export const SearchCard = ({
             <span>{videoAge}</span>
           </div>
         </div>
+
+        <div className="my-2 min-w-fit">
+          <a href="#" className="flex items-center gap-2 text-sm text-gray-400">
+            <img
+              src={channelInfo.image}
+              alt="channel"
+              className="h-9 w-9 rounded-full"
+            />
+            <span>{channelInfo.name}</span>
+          </a>
+        </div>
       </div>
     </div>
   );
