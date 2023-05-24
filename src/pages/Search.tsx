@@ -38,11 +38,11 @@ export const Search = () => {
               loader={<Spinner />}
               height={650}
             >
-              <div className="my-5">
-                {videos.map((item: HomePageVideos) => (
+              {videos.map((item: HomePageVideos) => (
+                <div className="my-5">
                   <SearchCard key={item.videoId} {...item} />
-                ))}
-              </div>
+                </div>
+              ))}
             </InfiniteScroll>
           </div>
         ) : (
