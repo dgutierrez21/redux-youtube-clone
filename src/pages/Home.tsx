@@ -8,16 +8,15 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import { Spinner } from "../components/Spinner";
 import { HomePageVideos } from "../Types";
 import { Card } from "../components/Card";
-import { clearVideos } from "../store/slices/youtubeSlice";
+import { clearSearchTerm, clearVideos } from "../store/slices/youtubeSlice";
 
 export const Home = () => {
   const dispatch = useAppDispatch();
   const videos = useAppSelector((state) => state.youtubeApp.videos);
 
   useEffect(() => {
-    return () => {
-      dispatch(clearVideos());
-    };
+    dispatch(clearSearchTerm());
+    dispatch(clearVideos());
   }, [dispatch]);
 
   useEffect(() => {
