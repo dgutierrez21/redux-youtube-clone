@@ -38,7 +38,7 @@ export const Search = () => {
             next={() => dispatch(getSearchPageVideos(true))}
             hasMore={videos.length < 500}
             loader={<Spinner />}
-            height={600}
+            height={650}
           >
             <div className="grid grid-cols-4 gap-x-8 gap-y-14 p-8">
               {videos.map((item: HomePageVideos) => (
