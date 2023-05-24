@@ -30,19 +30,21 @@ export const Search = () => {
         <SideBar />
 
         {videos.length ? (
-          <InfiniteScroll
-            dataLength={videos.length}
-            next={() => dispatch(getSearchPageVideos(true))}
-            hasMore={videos.length < 500}
-            loader={<Spinner />}
-            height={650}
-          >
-            <div className="grid grid-cols-4 gap-x-8 gap-y-14 p-8">
-              {videos.map((item: HomePageVideos) => (
-                <SearchCard key={item.videoId} {...item} />
-              ))}
-            </div>
-          </InfiniteScroll>
+          <div className="flex w-full flex-col gap-5 py-8 pl-8">
+            <InfiniteScroll
+              dataLength={videos.length}
+              next={() => dispatch(getSearchPageVideos(true))}
+              hasMore={videos.length < 500}
+              loader={<Spinner />}
+              height={650}
+            >
+              <div className="my-5">
+                {videos.map((item: HomePageVideos) => (
+                  <SearchCard key={item.videoId} {...item} />
+                ))}
+              </div>
+            </InfiniteScroll>
+          </div>
         ) : (
           <Spinner />
         )}
