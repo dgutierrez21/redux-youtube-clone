@@ -1,4 +1,4 @@
-import { FormEvent } from "react";
+import { FormEvent, ChangeEvent } from "react";
 
 import { GiHamburgerMenu } from "react-icons/gi";
 import { BsYoutube, BsCameraVideo, BsBell } from "react-icons/bs";
@@ -7,13 +7,14 @@ import { TiMicrophone } from "react-icons/ti";
 import { IoAppsSharp } from "react-icons/io5";
 
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { useAppDispatch } from "../store/hooks";
+import { useAppDispatch, useAppSelector } from "../store/hooks";
 import { clearVideos } from "../store/slices/youtubeSlice";
 
 export const Navbar = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
+  const searchTerm = useAppSelector((state) => state.youtubeApp.searchTerm);
 
   const handleSearch = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -25,6 +26,10 @@ export const Navbar = () => {
 
     dispatch(clearVideos());
     dispatch(getSearchPageVideos(false));
+  };
+
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    dispatch(changeSearchTerm(e.target.value));
   };
 
   return (
@@ -52,6 +57,8 @@ export const Navbar = () => {
               <input
                 type="text"
                 className="w-96 border-none bg-zinc-900 focus:outline-none"
+                value={searchTerm}
+                onChange={handleChange}
               />
 
               <AiOutlineClose className="cursor-pointer text-xl" />
