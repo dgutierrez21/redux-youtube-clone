@@ -19,7 +19,11 @@ export const SearchCard = ({
         </span>
 
         <Link to={`/watch/${videoId}`}>
-          <img src={videoThumbnail} alt="thumbnail" className="h-52 w-96" />
+          <img
+            src={videoThumbnail}
+            alt="thumbnail"
+            className=" h-52 w-96 rounded-xl transition-all duration-500 ease-in-out hover:rounded-none"
+          />
         </Link>
       </div>
 
