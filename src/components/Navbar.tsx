@@ -13,6 +13,7 @@ import {
   clearSearchTerm,
   clearVideos,
 } from "../store/slices/youtubeSlice";
+import { getSearchPageVideos } from "../store/reducers/youtubeSliceReducers/getSearchPageVideos";
 
 export const Navbar = () => {
   const location = useLocation();
@@ -23,10 +24,7 @@ export const Navbar = () => {
   const handleSearch = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    if (location.pathname !== "/search") {
-      navigate("/search");
-      return;
-    }
+    if (location.pathname !== "/search") navigate("/search");
 
     dispatch(clearVideos());
     dispatch(getSearchPageVideos(false));
