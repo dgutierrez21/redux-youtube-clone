@@ -6,6 +6,9 @@ export const SearchCard = ({
   videoThumbnail,
   videoId,
   videoTitle,
+  channelInfo,
+  videoViews,
+  videoAge,
 }: HomePageVideos) => {
   return (
     <div className="flex gap-3">
@@ -25,6 +28,15 @@ export const SearchCard = ({
             {videoTitle}
           </a>
         </h3>
+
+        <div className="text-sm text-gray-400">
+          <div>
+            <span className="after:mx-1 after:content-['•']">
+              {videoViews} views
+            </span>
+            <span>{videoAge}</span>
+          </div>
+        </div>
       </div>
     </div>
   );
