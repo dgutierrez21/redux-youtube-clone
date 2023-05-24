@@ -24,6 +24,8 @@ export const Navbar = () => {
   const handleSearch = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
+    if (!searchTerm) return;
+
     if (location.pathname !== "/search") navigate("/search");
 
     dispatch(clearVideos());
