@@ -8,7 +8,11 @@ import { IoAppsSharp } from "react-icons/io5";
 
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../store/hooks";
-import { changeSearchTerm, clearVideos } from "../store/slices/youtubeSlice";
+import {
+  changeSearchTerm,
+  clearSearchTerm,
+  clearVideos,
+} from "../store/slices/youtubeSlice";
 
 export const Navbar = () => {
   const location = useLocation();
@@ -65,6 +69,7 @@ export const Navbar = () => {
                 className={`cursor-pointer text-xl ${
                   !searchTerm ? "invisible" : "visible"
                 }`}
+                onClick={() => dispatch(clearSearchTerm())}
               />
             </div>
             <button className="flex h-10 w-16 items-center justify-center bg-zinc-800">
