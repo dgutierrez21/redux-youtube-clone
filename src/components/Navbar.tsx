@@ -8,7 +8,7 @@ import { IoAppsSharp } from "react-icons/io5";
 
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../store/hooks";
-import { clearVideos } from "../store/slices/youtubeSlice";
+import { changeSearchTerm, clearVideos } from "../store/slices/youtubeSlice";
 
 export const Navbar = () => {
   const location = useLocation();

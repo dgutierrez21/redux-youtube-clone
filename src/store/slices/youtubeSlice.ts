@@ -1,6 +1,6 @@
 import { initialState } from "../../Types";
 
-import { createSlice } from "@reduxjs/toolkit";
+import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import { getHomePageVideos } from "../reducers/youtubeSliceReducers/getHomePageVideos";
 
 const initialState: initialState = {
@@ -20,7 +20,13 @@ export const YoutubeSlice = createSlice({
       state.videos = [];
       state.nextPageToken = null;
 
-      console.log("clear")
+      console.log("clear");
+    },
+    changeSearchTerm: (state, { payload }: PayloadAction<string>) => {
+      state.searchTerm = payload;
+    },
+    clearSearchTerm: (state) => {
+      state.searchTerm = "";
     },
   },
   extraReducers: (builder) => {
@@ -33,4 +39,5 @@ export const YoutubeSlice = createSlice({
   },
 });
 
-export const {clearVideos} = YoutubeSlice.actions;
+export const { clearVideos, changeSearchTerm, clearSearchTerm } =
+  YoutubeSlice.actions;
