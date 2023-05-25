@@ -103,6 +103,18 @@ export const Watch = () => {
                         </div>
                       </div>
                     </div>
+
+                    <div className="my-5 flex flex-col gap-4 border-2 border-solid border-gray-400 border-l-transparent border-r-transparent py-3">
+                      <div className="mr-5 flex items-center gap-5">
+                        <div>
+                          <img
+                            src={currentPlaying.channelInfo.image}
+                            alt="channel-image"
+                            className="h-12 w-12 rounded-full"
+                          />
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
