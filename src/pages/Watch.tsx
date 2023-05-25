@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../store/hooks";
 import { getVideoDetails } from "../store/reducers/youtubeSliceReducers/getVideoDetails";
+import { getRecommendedVideos } from "../store/reducers/youtubeSliceReducers/getRecommendedVideos";
 
 export const Watch = () => {
   const [showMoreStatus, setShowMoreStatus] = useState<boolean>(false);
@@ -25,7 +26,7 @@ export const Watch = () => {
   }, [dispatch, id, navigate]);
 
   useEffect(() => {
-    if (currentPlaying && id) dispatch(getRecommendedVideos());
+    if (currentPlaying && id) dispatch(getRecommendedVideos(id));
   }, [currentPlaying, id, dispatch]);
 
   return <div>Watch</div>;
