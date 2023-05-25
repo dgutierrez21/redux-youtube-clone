@@ -3,12 +3,13 @@ import { initialState } from "../../Types";
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import { getHomePageVideos } from "../reducers/youtubeSliceReducers/getHomePageVideos";
 import { getSearchPageVideos } from "../reducers/youtubeSliceReducers/getSearchPageVideos";
+import { getVideoDetails } from "../reducers/youtubeSliceReducers/getVideoDetails";
 
 const initialState: initialState = {
   videos: [],
   currentPlaying: {
     videoId: "",
-    videoTitle: "", 
+    videoTitle: "",
     videoDescription: "",
     videoViews: "",
     videoLikes: "",
@@ -56,6 +57,10 @@ export const YoutubeSlice = createSlice({
 
       state.videos = action.payload.parsedData;
       state.nextPageToken = action.payload.nextPageToken;
+    });
+
+    builder.addCase(getVideoDetails.fulfilled, (state, action) => {
+      state.currentPlaying = action.payload;
     });
   },
 });
