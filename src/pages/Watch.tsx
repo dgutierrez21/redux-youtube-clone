@@ -129,6 +129,19 @@ export const Watch = () => {
                           </button>
                         </div>
                       </div>
+
+                      <div
+                        className={`w-11/12 text-sm ${
+                          !showMoreStatus ? "max-h-16 overflow-hidden" : ""
+                        }`}
+                      >
+                        <pre
+                          style={{ fontFamily: "'Roboto', san-serif" }}
+                          className="whitespace-pre-wrap"
+                        >
+                          {currentPlaying.videoDescription}
+                        </pre>
+                      </div>
                     </div>
                   </div>
                 </div>
