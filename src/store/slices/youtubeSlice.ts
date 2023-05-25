@@ -6,7 +6,20 @@ import { getSearchPageVideos } from "../reducers/youtubeSliceReducers/getSearchP
 
 const initialState: initialState = {
   videos: [],
-  currentPlaying: null,
+  currentPlaying: {
+    videoId: "",
+    videoTitle: "", 
+    videoDescription: "",
+    videoViews: "",
+    videoLikes: "",
+    videoAge: "",
+    channelInfo: {
+      id: "",
+      image: "",
+      name: "",
+      subscribers: "",
+    },
+  },
   searchTerm: "",
   searchResults: [],
   nextPageToken: null,
