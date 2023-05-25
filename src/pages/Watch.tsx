@@ -9,6 +9,7 @@ import { BiLike, BiDislike } from "react-icons/bi";
 import { FaShare } from "react-icons/fa";
 import { HiScissors } from "react-icons/hi";
 import { MdOutlinePlaylistAdd } from "react-icons/md";
+import { BsThreeDots } from "react-icons/bs";
 
 export const Watch = () => {
   const [showMoreStatus, setShowMoreStatus] = useState<boolean>(false);
@@ -95,6 +96,10 @@ export const Watch = () => {
                         <div className="watch-icon">
                           <MdOutlinePlaylistAdd className="text-xl" />
                           <strong>save</strong>
+                        </div>
+
+                        <div className="watch-icon">
+                          <BsThreeDots className="text-xl" />
                         </div>
                       </div>
                     </div>
