@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../store/hooks";
+import { getVideoDetails } from "../store/reducers/youtubeSliceReducers/getVideoDetails";
 
 export const Watch = () => {
   const [showMoreStatus, setShowMoreStatus] = useState<boolean>(false);
