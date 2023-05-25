@@ -69,12 +69,12 @@ export const Watch = () => {
                       </div>
 
                       <div className="flex items-center gap-4 uppercase">
-                        <div className="flex cursor-pointer items-center gap-1">
+                        <div className="watch-icon">
                           <BiLike className="text-xl" />
                           <strong>{currentPlaying.videoLikes}</strong>
                         </div>
 
-                        <div className="flex cursor-pointer items-center gap-1">
+                        <div className="watch-icon">
                           <BiDislike className="text-xl" />
                           <strong>dislike</strong>
                         </div>
