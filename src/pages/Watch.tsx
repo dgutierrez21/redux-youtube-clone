@@ -122,6 +122,12 @@ export const Watch = () => {
                             {currentPlaying.channelInfo.subscribers} subscribers
                           </h6>
                         </div>
+
+                        <div>
+                          <button className="rounded-sm bg-red-600 p-2 text-sm uppercase tracking-wider">
+                            subscribe
+                          </button>
+                        </div>
                       </div>
                     </div>
                   </div>
