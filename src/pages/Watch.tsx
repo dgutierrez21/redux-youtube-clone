@@ -22,7 +22,14 @@ export const Watch = () => {
     (state) => state.youtubeApp.currentPlaying
   );
 
-  const { videoTitle } = currentPlaying;
+  const {
+    videoTitle,
+    channelInfo,
+    videoAge,
+    videoDescription,
+    videoLikes,
+    videoViews,
+  } = currentPlaying;
 
   useEffect(() => {
     if (id) {
@@ -67,15 +74,15 @@ export const Watch = () => {
                     <div className="mt-1 flex justify-between">
                       <div className="text-sm text-gray-400">
                         <span className="after:mx-1 after:content-['•']">
-                          {currentPlaying.videoViews} views
+                          {videoViews} views
                         </span>
-                        <span>{currentPlaying.videoAge} ago</span>
+                        <span>{videoAge} ago</span>
                       </div>
 
                       <div className="flex items-center gap-4 uppercase">
                         <div className="watch-icon">
                           <BiLike className="text-xl" />
-                          <strong>{currentPlaying.videoLikes}</strong>
+                          <strong>{videoLikes}</strong>
                         </div>
 
                         <div className="watch-icon">
@@ -108,7 +115,7 @@ export const Watch = () => {
                       <div className="mr-5 flex items-center gap-5">
                         <div>
                           <img
-                            src={currentPlaying.channelInfo.image}
+                            src={channelInfo.image}
                             alt="channel-image"
                             className="h-12 w-12 rounded-full"
                           />
@@ -116,10 +123,10 @@ export const Watch = () => {
 
                         <div className="w-5/6">
                           <h5 className="text-sm">
-                            <strong>{currentPlaying.channelInfo.name}</strong>
+                            <strong>{channelInfo.name}</strong>
                           </h5>
                           <h6 className="text-xs text-gray-400">
-                            {currentPlaying.channelInfo.subscribers} subscribers
+                            {channelInfo.subscribers} subscribers
                           </h6>
                         </div>
 
@@ -139,7 +146,7 @@ export const Watch = () => {
                           style={{ fontFamily: "'Roboto', san-serif" }}
                           className="whitespace-pre-wrap"
                         >
-                          {currentPlaying.videoDescription}
+                          {videoDescription}
                         </pre>
                       </div>
 
