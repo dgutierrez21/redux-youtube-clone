@@ -12,7 +12,7 @@ export const getHomePageVideos = createAsyncThunk(
       youtubeApp: { nextPageToken: nextPageTokenFromState, videos },
     } = getState() as RootState;
 
-    const youtubeUrl = `/search?maxResults=20&q=reactjs%20projects&key=${API_KEY}&part=snippet&type=video&${
+    const youtubeUrl = `/search?maxResults=20&q=what%20is%20frontend&key=${API_KEY}&part=snippet&type=video&${
       isNext ? `pageToken=${nextPageTokenFromState}` : ""
     }`;
 
