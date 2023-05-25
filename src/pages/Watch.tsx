@@ -7,6 +7,7 @@ import { Navbar } from "../components/Navbar";
 
 import { BiLike, BiDislike } from "react-icons/bi";
 import { FaShare } from "react-icons/fa";
+import { HiScissors } from "react-icons/hi";
 
 export const Watch = () => {
   const [showMoreStatus, setShowMoreStatus] = useState<boolean>(false);
@@ -83,6 +84,11 @@ export const Watch = () => {
                         <div className="watch-icon">
                           <FaShare className="text-xl" />
                           <strong>share</strong>
+                        </div>
+
+                        <div className="watch-icon">
+                          <HiScissors className="text-xl" />
+                          <strong>clip</strong>
                         </div>
                       </div>
                     </div>
