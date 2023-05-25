@@ -6,6 +6,7 @@ import { getRecommendedVideos } from "../store/reducers/youtubeSliceReducers/get
 import { Navbar } from "../components/Navbar";
 
 import { BiLike, BiDislike } from "react-icons/bi";
+import { FaShare } from "react-icons/fa";
 
 export const Watch = () => {
   const [showMoreStatus, setShowMoreStatus] = useState<boolean>(false);
@@ -77,6 +78,11 @@ export const Watch = () => {
                         <div className="watch-icon">
                           <BiDislike className="text-xl" />
                           <strong>dislike</strong>
+                        </div>
+
+                        <div className="watch-icon">
+                          <FaShare className="text-xl" />
+                          <strong>share</strong>
                         </div>
                       </div>
                     </div>
