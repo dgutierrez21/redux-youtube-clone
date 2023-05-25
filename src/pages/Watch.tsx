@@ -57,6 +57,15 @@ export const Watch = () => {
 
                   <div className="mt-5">
                     <p className="text-xl">{videoTitle}</p>
+
+                    <div className="mt-1 flex justify-between">
+                      <div className="text-sm text-gray-400">
+                        <span className="after:mx-1 after:content-['•']">
+                          {currentPlaying.videoViews} views
+                        </span>
+                        <span>{currentPlaying.videoAge} ago</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
