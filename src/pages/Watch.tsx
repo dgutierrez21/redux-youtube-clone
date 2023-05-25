@@ -63,13 +63,13 @@ export const Watch = () => {
               <div className="" style={{ maxWidth: "800px" }}>
                 <div>
                   <iframe
-                    src={`https://www.youtube.com/embed/${id}?autoplay-1`}
+                    src={`https://www.youtube.com/embed/${id}?autoplay=1`}
                     style={{
                       border: "1px solid black",
                     }}
                     width="800"
                     height="500"
-                    allowFullScreen
+                    allow="autoplay"
                     title="Youtube video player"
                   ></iframe>
 
