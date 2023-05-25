@@ -16,6 +16,8 @@ export const Watch = () => {
     (state) => state.youtubeApp.currentPlaying
   );
 
+  const { videoTitle } = currentPlaying;
+
   useEffect(() => {
     if (id) {
       dispatch(getVideoDetails(id));
@@ -52,6 +54,10 @@ export const Watch = () => {
                     allowFullScreen
                     title="Youtube video player"
                   ></iframe>
+
+                  <div className="mt-5">
+                    <p className="text-xl">{videoTitle}</p>
+                  </div>
                 </div>
               </div>
             </div>
