@@ -113,6 +113,12 @@ export const Watch = () => {
                             className="h-12 w-12 rounded-full"
                           />
                         </div>
+
+                        <div className="w-5/6">
+                          <h5 className="text-sm">
+                            <strong>{currentPlaying.channelInfo.name}</strong>
+                          </h5>
+                        </div>
                       </div>
                     </div>
                   </div>
