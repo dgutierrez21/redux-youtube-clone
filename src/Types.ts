@@ -13,8 +13,20 @@ export interface HomePageVideos {
     name: string;
   };
 }
-
-export interface CurrentPlaying {}
+export interface CurrentPlaying {
+  videoId: string;
+  videoTitle: string;
+  videoDescription: string;
+  videoViews: string;
+  videoLikes: string;
+  videoAge: string;
+  channelInfo: {
+    id: string;
+    image: string;
+    name: string;
+    subscribers: string;
+  };
+}
 
 export interface RecommendedVideos {
   videoId: string;
@@ -42,7 +54,7 @@ export interface Item {
 
 export interface initialState {
   videos: HomePageVideos[];
-  currentPlaying: CurrentPlaying | null;
+  currentPlaying: CurrentPlaying;
   searchTerm: string;
   searchResults: [];
   nextPageToken: string | null;
