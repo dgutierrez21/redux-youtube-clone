@@ -70,6 +70,7 @@ export const Watch = () => {
                     width="800"
                     height="500"
                     allow="autoplay"
+                    allowFullScreen
                     title="Youtube video player"
                   ></iframe>
 
