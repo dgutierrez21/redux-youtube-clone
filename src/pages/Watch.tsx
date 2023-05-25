@@ -142,6 +142,15 @@ export const Watch = () => {
                           {currentPlaying.videoDescription}
                         </pre>
                       </div>
+
+                      <div>
+                        <button
+                          className="cursor-pointer text-sm uppercase"
+                          onClick={() => setShowMoreStatus(!showMoreStatus)}
+                        >
+                          Show {showMoreStatus ? "less" : "more"}
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
