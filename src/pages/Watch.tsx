@@ -10,6 +10,7 @@ import { FaShare } from "react-icons/fa";
 import { HiScissors } from "react-icons/hi";
 import { MdOutlinePlaylistAdd } from "react-icons/md";
 import { BsThreeDots } from "react-icons/bs";
+import { WatchCard } from "../components/WatchCard";
 
 export const Watch = () => {
   const [showMoreStatus, setShowMoreStatus] = useState<boolean>(false);
@@ -20,6 +21,10 @@ export const Watch = () => {
 
   const currentPlaying = useAppSelector(
     (state) => state.youtubeApp.currentPlaying
+  );
+
+  const recommendedVideos = useAppSelector(
+    (state) => state.youtubeApp.recommendedVideos
   );
 
   const {
@@ -161,6 +166,13 @@ export const Watch = () => {
                     </div>
                   </div>
                 </div>
+              </div>
+
+              <div className="mr-24 flex flex-col gap-3">
+                {getRecommendedVideos.length &&
+                  recommendedVideos.map((item) => (
+                    <WatchCard key={item.videoId} {...item} />
+                  ))}
               </div>
             </div>
           </div>
