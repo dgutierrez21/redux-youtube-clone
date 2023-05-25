@@ -8,6 +8,7 @@ import { Navbar } from "../components/Navbar";
 import { BiLike, BiDislike } from "react-icons/bi";
 import { FaShare } from "react-icons/fa";
 import { HiScissors } from "react-icons/hi";
+import { MdOutlinePlaylistAdd } from "react-icons/md";
 
 export const Watch = () => {
   const [showMoreStatus, setShowMoreStatus] = useState<boolean>(false);
@@ -89,6 +90,11 @@ export const Watch = () => {
                         <div className="watch-icon">
                           <HiScissors className="text-xl" />
                           <strong>clip</strong>
+                        </div>
+
+                        <div className="watch-icon">
+                          <MdOutlinePlaylistAdd className="text-xl" />
+                          <strong>save</strong>
                         </div>
                       </div>
                     </div>
